@@ -5,6 +5,9 @@ class Solution(object):
         :type target: int
         :rtype: int
         """
+        # 시간복잡도: 
+        # 공간복잡도: 
+
         start = 0
         end = len(nums) - 1
 
