@@ -4,12 +4,13 @@ class Solution:
         # 공간복잡도: list의 길이에 대해 O(n)
 
         result = []
+        total_product = math.prod(nums)
 
         for i in range(len(nums)):
             if nums[i] == 0:
-                result.append(math.prod([e for j, e in enumerate(nums) if j != i]))
+                result.append(int(math.prod([e for j, e in enumerate(nums) if j != i])))
             else:
-                result.append(int(math.prod(nums) * pow(nums[i], -1)))
+                result.append(int(total_product * pow(nums[i], -1)))
 
 
         return result
